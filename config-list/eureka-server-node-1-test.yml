@@ -1,5 +1,5 @@
 server:
-  port: 8086
+  port: 8082
   max-http-header-size: 20480
   
 spring:
@@ -13,5 +13,5 @@ eureka:
     instance-id: ${spring.cloud.client.ip-address}:${server.port} #新版本配置
   client:
     service-url:
-      defaultZone: http://localhost:8086/eureka/
+      defaultZone: http://localhost:8082/eureka/
       #defaultZone: http://localhost:8087/eureka/,http://localhost:8088/eureka/
