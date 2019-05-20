@@ -1,0 +1,24 @@
+﻿一、服务注册中心
+	http://localhost:8082/
+
+二、服务提供方
+	http://localhost:8085/helloWorld?name=Test
+
+三、服务消费方
+	--通过服务提供方
+	http://localhost:8086/consumerHelloWorld?name=Test
+	--不通过服务提供方
+	http://localhost:8086/helloWorld?name=Test
+
+四、Hystrix
+        http://localhost:8086/hystrix.stream
+	http://localhost:8083/hystrix/monitor?stream= http://localhost:8086/hystrix.stream
+	
+        http://localhost:8086/turbine.stream
+	http://localhost:8083/hystrix/monitor?stream= http://localhost:8086/turbine.stream
+
+五、Zuul
+	---访问被拒绝
+	http://localhost:8086/service-consumer/consumerHelloWorld?name=rose
+	---访问通过
+	http://localhost:8086/service-consumer/consumerHelloWorld?name=rose&token=true 
