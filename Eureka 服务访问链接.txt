@@ -21,7 +21,7 @@
 	---访问被拒绝
 	http://localhost:8086/service-consumer/consumerHelloWorld?name=rose
 	---访问通过
-	http://localhost:8086/service-consumer/consumerHelloWorld?name=rose&token=true 
+	http://localhost:8084/service-consumer/consumerHelloWorld?name=rose&token=true 
 	
 六、Actuator 查看配置	
 	http://localhost:8086/actuator/env
